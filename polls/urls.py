@@ -1,4 +1,6 @@
 from django.urls import path
+from debug_toolbar.toolbar import debug_toolbar_urls
+from django.conf import settings
 
 from . import views
 
@@ -13,3 +15,8 @@ urlpatterns = [
     # /polls/2/vote/
     path("<int:question_id>/vote/", views.vote, name="vote"),
 ]
+
+if not settings.TESTING:
+    urlpatterns = [
+        *urlpatterns,
+    ] + debug_toolbar_urls()

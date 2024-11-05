@@ -11,6 +11,7 @@ django = "^5.0.7"
 psycopg = "^3.1.19"
 black = "^24.8.0"
 isort = "^5.13.2"
+django-debug-toolbar = "^4.4.6"
 
 [tool.isort]
 multi_line_output = 3
