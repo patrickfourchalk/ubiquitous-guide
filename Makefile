@@ -8,10 +8,10 @@ migrate:
 	poetry run python manage.py migrate
 
 makemigrations:
-	poetry run python manage.py makemigrations
+	poetry run python manage.py makemigrations $(APP)
 
 sqlmigrate:
-	poetry run python manage.py sqlmigrate
+	poetry run python manage.py sqlmigrate $(APP) $(NUM)
 
 shell:
 	poetry run python manage.py shell
